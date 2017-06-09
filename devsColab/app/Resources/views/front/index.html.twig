@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body id="testAlacon">
+
+<h2 id="wordToGuess"></h2>
+<h2 id="respond"></h2>
+<script src="js/game.js"></script>
+<script>
+
+    var words = [];
+    {% for word in words %}
+          words.push('{{ word.word }}');
+    {% endfor %}
+
+    init();
+
+</script>
+</body>
+</html>
