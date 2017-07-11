@@ -1,0 +1,15 @@
+version: '2'
+services:
+    mysql:
+        image: mysql
+        volumes:
+            - "/var/lib/devColab/mysql:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: ygeuicdsbhxbqsiuxhjs
+            MYSQL_DATABASE: devcoco
+    colab-v1:
+        build: .
+        ports:
+            - 8080:80
+        links:
+            - mysql:mysql
