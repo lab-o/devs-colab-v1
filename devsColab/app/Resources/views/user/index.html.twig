@@ -1,30 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Words list</h1>
+    <h1>Users list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Word</th>
-                <th>Category</th>
+                <th>Name</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for word in words %}
+        {% for user in users %}
             <tr>
-                <td><a href="{{ path('word_show', { 'id': word.id }) }}">{{ word.id }}</a></td>
-                <td>{{ word.word }}</td>
-                <td>{{ word.category.name }}</td>
+                <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.name }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('word_show', { 'id': word.id }) }}">show</a>
+                            <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('word_edit', { 'id': word.id }) }}">edit</a>
+                            <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -35,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('word_new') }}">Create a new word</a>
+            <a href="{{ path('user_new') }}">Create a new user</a>
         </li>
     </ul>
 {% endblock %}

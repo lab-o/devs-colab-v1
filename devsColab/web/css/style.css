@@ -12,3 +12,17 @@ h2
     font-size: 70px;
     text-align: center;
 }
+.userName
+{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    margin: 0;
+}
+.categoryName
+{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    margin: 0;
+}

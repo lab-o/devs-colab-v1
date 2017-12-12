@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Jeu{% endblock %}
+
+{% block body %}
+    <p class="userName">{{ user.name }}</p>
+    <p class="categoryName">{{ category.name }}</p>
+    <h2 id="wordToGuess"></h2>
+    <h2 id="respond"></h2>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/game.js') }}"></script>
+    <script>
+
+        var words = [];
+        {% for word in words %}
+        words.push('{{ word.word }}');
+        {% endfor %}
+
+        init();
+
+    </script>
+{% endblock %}
